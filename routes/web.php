@@ -17,7 +17,10 @@ Route::get('/', function () {
 
 Route::get('/editoras', 'EditoraController@index');
 
-
 Route::get('/editoras/cria', 'EditoraController@cria');
 
+Route::get('/editoras/edita/{id}', 'EditoraController@edita');
+
 Route::post('/editoras', 'EditoraController@armazena');
+
+Route::patch('/editoras/{id}', 'EditoraController@atualiza');
